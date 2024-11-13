@@ -2,7 +2,7 @@
 
 # Aplikacja do Generowania HTML z Artykułu
 
-## Opis
+## Opis zadania
 Aplikacja napisana w Pythonie, która wykorzystuje OpenAI API do przekształcenia artykułu tekstowego na kod HTML. Aplikacja przekształca zwykły tekst artykułu na stronę HTML, strukturalizując treść za pomocą odpowiednich tagów HTML (takich jak nagłówki, akapity, obrazy i podpisy pod obrazkami). Program umożliwia wygodne generowanie zawartości HTML w pełni zautomatyzowanym procesie.
 
 ## Cel
@@ -57,7 +57,8 @@ Repozytorium zawiera następujące pliki:
 * ``` main.py ``` – Główny plik aplikacji, który zawiera kod do przetwarzania artykułu i generowania HTML.
 * ``` artykul.txt ``` – Przykładowy artykuł w formacie tekstowym, który zostanie użyty w aplikacji.
 * ``` artykul.html ``` – Wygenerowany plik HTML, zawierający kod HTML na podstawie artykułu.
-
+* ``` szablon.html ``` – szablon HTML dla wizualizacji artykułów (sekcja zadania dodatkowego).
+* ``` podglad.html ``` – plik z pełnym podglądem artykułu (sekcja zadania dodatkowego).
 * ``` README.md ``` – Plik dokumentacji, który zawiera informacje o projekcie oraz instrukcje uruchomienia aplikacji.
 
 ## Zasady i Wytyczne
@@ -65,6 +66,27 @@ Repozytorium zawiera następujące pliki:
 * Użycie tagów HTML takich jak `<h1>`, `<h2>`, `<ul>`, `<p>`, `<img>`, z odpowiednimi atrybutami, w tym alt do obrazów.
 * Aplikacja nie generuje kodu CSS ani JavaScript, lecz tylko czysty HTML w sekcji `<body>`.
 * Każdy obraz w artykule jest reprezentowany przez tag `<img>` z tekstem opisującym obraz w atrybucie `alt`.
+
+
+# Zadanie dla chętnych: Szablon HTML do podglądu artykułu
+
+## Opis zadania
+Dla wzbogacenia projektu, opracowany został prosty szablon HTML w pliku szablon.html, który umożliwia wizualizację artykułu po wklejeniu jego kodu HTML w sekcji <body>. Dodatkowo, pełny podgląd artykułu wygenerowany po wklejeniu treści artykul.html do szablon.html zapisano jako podglad.html.
+
+## Struktura plików
+* ``` szablon.html ``` – szablon HTML gotowy do wstawienia treści artykułu.
+* ``` podglad.html ``` – końcowy podgląd z wklejoną treścią ``` artykul.html ```.
+
+## Instrukcja
+1. Skopiuj wygenerowaną zawartość pliku ``` artykul.html ``` do sekcji ``` <body> ``` w pliku ```szablon.html```.
+2. Zapisz skopiowany plik jako ``` podglad.html ```, aby uzyskać pełen podgląd artykułu.
+
+## Przykład użycia
+1. W pliku ```szablon.html``` zdefiniowane zostały style CSS oraz prosty JavaScript umożliwiający łatwe wklejenie wygenerowanego kodu HTML artykułu i podgląd.
+2. Wklej zawartość ``` artykul.html ``` do ``` <body> ``` pliku ``` szablon.html ``` i zapisz jako ``` podglad.html ```, aby móc otworzyć go i zobaczyć pełny podgląd artykułu.
+
+## Uwagi
+Szablon ``` szablon.html ``` nie zawiera żadnych treści początkowych w ``` <body> ```, więc można bezpośrednio wklejać tam wygenerowany kod ``` artykul.html ``` bez ryzyka nadpisania innej treści.
 
 ### Autor Projektu: Klaudia Czechowska 
 
