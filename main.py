@@ -1,6 +1,5 @@
 import openai
 
-# Twój klucz API OpenAI
 # openai.api_key = "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"
 
 def wczytaj_tresc_z_pliku(sciezka_do_pliku):
@@ -11,9 +10,8 @@ def wczytaj_tresc_z_pliku(sciezka_do_pliku):
 def generuj_html_z_openai(tresc_artykulu, prompt):
     """Funkcja wysyłająca treść artykułu i prompt do OpenAI API, by uzyskać HTML."""
     try:
-        # Nowa metoda - używamy "chat" API z modelem gpt-3.5-turbo lub gpt-4
         response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",  # Możesz też używać "gpt-4", jeśli masz dostęp
+            model="gpt-3.5-turbo", 
             messages=[
                 {"role": "system", "content": "Jesteś pomocnym asystentem."},
                 {"role": "user", "content": prompt + "\n\n" + tresc_artykulu}
@@ -35,8 +33,8 @@ def zapisz_html_do_pliku(html_content, sciezka_do_pliku):
 
 def main():
     # Ścieżki do plików
-    sciezka_tekst = "artykul.txt"  # Plik wejściowy z treścią artykułu
-    sciezka_wyjscie = "artykul.html"  # Plik wyjściowy na wygenerowany kod HTML
+    sciezka_tekst = "artykul.txt"  
+    sciezka_wyjscie = "artykul.html"  
 
     # Wczytaj treść artykułu z pliku
     tresc_artykulu = wczytaj_tresc_z_pliku(sciezka_tekst)
