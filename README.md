@@ -27,7 +27,13 @@ Nie zawiera żadnego kodu CSS ani JavaScript, ponieważ program generuje jedynie
 Przed uruchomieniem aplikacji musisz zainstalować bibliotekę `openai`. W tym celu uruchom poniższą komendę:
 
 ```
-pip3 install openai==0.28
+pip3 install openai==0.28 
+```
+* jeśli posiadasz zainstalowany python3.
+* natomiast, jeśli posiadasz zainstalowany python2, komenda będzie wyglądała w ten sposób:
+
+```
+pip install openai==0.28
 ```
 
 ## Krok 2: Uzyskanie klucza API 
@@ -39,7 +45,7 @@ openai.api_key = "Twój_Klucz_API"
 ```
 
 ## Krok 3: Przygotowanie Pliku Artykułu
-W aplikacji artykuł jest wczytywany z pliku tekstowego (np. ```artykul.txt```). 
+W aplikacji artykuł jest wczytywany z pliku tekstowego ```artykul.txt```. 
 Wczytany plik tekstowy zostanie przesłany do OpenAI API, które zwróci kod HTML.
 
 ## Krok 4: Uruchomienie Aplikacji
@@ -47,9 +53,15 @@ Po przygotowaniu artykułu i ustawieniu klucza API, uruchom aplikację za pomoc�
 ```
 python3 main.py
 ```
+* jeśli posiadasz zainstalowany python3.
+* natomiast, jeśli posiadasz zainstalowany python2, komenda będzie wyglądała w ten sposób:
+```
+python main.py
+```
+
 
 ## Krok 5: Wygenerowany Plik HTML
-Po pomyślnym wykonaniu skryptu, wygenerowany plik HTML będzie zapisany w katalogu głównym projektu jako artykul.html. 
+Po pomyślnym wykonaniu skryptu, wygenerowany plik HTML będzie zapisany w katalogu głównym projektu jako ```artykul.html```. 
 W pliku tym będzie znajdować się treść artykułu przekształcona na kod HTML z odpowiednimi tagami i obrazami.
 
 ### Struktura Repozytorium
@@ -71,7 +83,7 @@ Repozytorium zawiera następujące pliki:
 # Zadanie dla chętnych: Szablon HTML do podglądu artykułu
 
 ## Opis zadania
-Dla wzbogacenia projektu, opracowany został prosty szablon HTML w pliku szablon.html, który umożliwia wizualizację artykułu po wklejeniu jego kodu HTML w sekcji <body>. Dodatkowo, pełny podgląd artykułu wygenerowany po wklejeniu treści artykul.html do szablon.html zapisano jako podglad.html.
+Dla wzbogacenia projektu, opracowany został prosty szablon HTML w pliku ```szablon.html```, który umożliwia wizualizację artykułu po wklejeniu jego kodu HTML w sekcji ```<body>```. Dodatkowo, pełny podgląd artykułu wygenerowany po wklejeniu treści ```artykul.html``` do ```szablon.html``` zapisano jako ```podglad.html```.
 
 ## Struktura plików
 * ``` szablon.html ``` – szablon HTML gotowy do wstawienia treści artykułu.
@@ -82,7 +94,7 @@ Dla wzbogacenia projektu, opracowany został prosty szablon HTML w pliku szablon
 2. Zapisz skopiowany plik jako ``` podglad.html ```, aby uzyskać pełen podgląd artykułu.
 
 ## Przykład użycia
-1. W pliku ```szablon.html``` zdefiniowane zostały style CSS oraz prosty JavaScript umożliwiający łatwe wklejenie wygenerowanego kodu HTML artykułu i podgląd.
+1. W pliku ```szablon.html``` zdefiniowane zostały style CSS oraz prosty kod w JavaScript umożliwiający łatwe wklejenie wygenerowanego kodu HTML artykułu i podgląd.
 2. Wklej zawartość ``` artykul.html ``` do ``` <body> ``` pliku ``` szablon.html ``` i zapisz jako ``` podglad.html ```, aby móc otworzyć go i zobaczyć pełny podgląd artykułu.
 
 ## Uwagi
