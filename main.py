@@ -36,7 +36,7 @@ def main():
     sciezka_tekst = "artykul.txt"  
     sciezka_wyjscie = "artykul.html"  
 
-    # Wczytaj treść artykułu z pliku
+    # Wczytuje treść artykułu z pliku
     tresc_artykulu = wczytaj_tresc_z_pliku(sciezka_tekst)
 
     # Prompt, który przekażemy do OpenAI
@@ -51,12 +51,12 @@ def main():
         "Przekształć następującą treść artykułu na kod HTML zgodnie z powyższymi wytycznymi."
     )
 
-    # Generujemy kod HTML na podstawie artykułu i promptu
+    # Generuje kod HTML na podstawie artykułu i promptu
     wygenerowany_html = generuj_html_z_openai(tresc_artykulu, prompt)
 
-    # Sprawdzamy, czy kod HTML został wygenerowany
+    # Sprawdza, czy kod HTML został wygenerowany
     if wygenerowany_html:
-        # Zapisz wygenerowany HTML do pliku
+        # Zapisuje wygenerowany HTML do pliku
         zapisz_html_do_pliku(wygenerowany_html, sciezka_wyjscie)
         print(f"HTML został wygenerowany i zapisany w {sciezka_wyjscie}.")
     else:
